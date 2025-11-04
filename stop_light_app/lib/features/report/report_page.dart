@@ -26,7 +26,7 @@ class ReportPage extends StatelessWidget {
     const marketHigh = 12500;
     const priceJudgment = 'fair';
 
-    final issues = const [
+    const issues = [
       {
         'title': 'Timing chain / tensioner',
         'severity': 'high',
@@ -79,11 +79,11 @@ class ReportPage extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
-          _SectionTitle('Issues'),
+          const _SectionTitle('Issues'),
           const SizedBox(height: 8),
           ...issues.map((i) => _IssueListTile(issue: i)).toList(),
           const SizedBox(height: 16),
-          _SectionTitle('Negotiation points'),
+          const _SectionTitle('Negotiation points'),
           const SizedBox(height: 8),
           ...negotiation.map((t) => ListTile(
             contentPadding: const EdgeInsets.symmetric(horizontal: 8),
@@ -91,7 +91,7 @@ class ReportPage extends StatelessWidget {
             title: Text(t),
           )),
           const SizedBox(height: 16),
-          _SectionTitle('Bottom line'),
+          const _SectionTitle('Bottom line'),
           const SizedBox(height: 8),
           const Card(
             child: Padding(

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'core/services/supabase_service.dart';
 import 'core/theme.dart';
 import 'features/home/home_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Supa.init();
   runApp(const StopLightApp());
 }
+
 
 class StopLightApp extends StatelessWidget {
   const StopLightApp({super.key});
